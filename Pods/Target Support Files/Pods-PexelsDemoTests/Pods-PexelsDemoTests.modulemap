@@ -1,0 +1,6 @@
+module Pods_PexelsDemoTests {
+  umbrella header "Pods-PexelsDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

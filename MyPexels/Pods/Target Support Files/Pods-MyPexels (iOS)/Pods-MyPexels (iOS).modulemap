@@ -1,6 +1,0 @@
-module Pods_MyPexels__iOS_ {
-  umbrella header "Pods-MyPexels (iOS)-umbrella.h"
-
-  export *
-  module * { export * }
-}
