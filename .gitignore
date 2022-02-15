@@ -3,4 +3,9 @@ xcuserdata/
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
-!*.xcworkspace/contents.xcworkspacedata
+!*.xcworkspace/contents.xcworkspacedata  
+  
+MyPexels/*.xcodeproj/*
+MyPexels/!*.xcodeproj/project.pbxproj
+MyPexels/!*.xcodeproj/xcshareddata/
+MyPexels/!*.xcworkspace/contents.xcworkspacedata
