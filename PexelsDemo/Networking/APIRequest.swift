@@ -18,7 +18,6 @@ class APIRequest<Resource: APIResource> {
 extension APIRequest: NetworkRequest {
     func decode(_ data: Data) -> Resource.ModelType? {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .secondsSince1970
         let wrapper = try? decoder.decode(Resource.ModelType.self, from: data)
         return wrapper
     }

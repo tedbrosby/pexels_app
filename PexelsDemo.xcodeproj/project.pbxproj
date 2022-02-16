@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		37793BA07FA1DD675988378E /* libPods-PexelsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 134F2B8C2C19217CB03CCF57 /* libPods-PexelsDemo.a */; };
+		60670CAF27BCD26200702B48 /* PhotosResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60670CAE27BCD26200702B48 /* PhotosResource.swift */; };
+		60670CB227BCF8FD00702B48 /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60670CB027BCF8FD00702B48 /* PhotoViewCell.swift */; };
+		60670CB327BCF8FD00702B48 /* PhotoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60670CB127BCF8FD00702B48 /* PhotoViewCell.xib */; };
 		609E61D527BBAA270057E66B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609E61D427BBAA270057E66B /* AppDelegate.swift */; };
 		609E61D727BBAA270057E66B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609E61D627BBAA270057E66B /* SceneDelegate.swift */; };
 		609E61D927BBAA270057E66B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609E61D827BBAA270057E66B /* ViewController.swift */; };
@@ -48,6 +51,9 @@
 		134F2B8C2C19217CB03CCF57 /* libPods-PexelsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PexelsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F78905CDA80BAB2977215C4 /* Pods-PexelsDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PexelsDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-PexelsDemoTests/Pods-PexelsDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		32699B591DD70DE161587CB7 /* libPods-PexelsDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PexelsDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60670CAE27BCD26200702B48 /* PhotosResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResource.swift; sourceTree = "<group>"; };
+		60670CB027BCF8FD00702B48 /* PhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
+		60670CB127BCF8FD00702B48 /* PhotoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewCell.xib; sourceTree = "<group>"; };
 		609E61D127BBAA270057E66B /* PexelsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PexelsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		609E61D427BBAA270057E66B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		609E61D627BBAA270057E66B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +160,8 @@
 				609E61DF27BBAA290057E66B /* LaunchScreen.storyboard */,
 				609E61E227BBAA290057E66B /* Info.plist */,
 				609E620427BBABE90057E66B /* ViewModel.swift */,
+				60670CB027BCF8FD00702B48 /* PhotoViewCell.swift */,
+				60670CB127BCF8FD00702B48 /* PhotoViewCell.xib */,
 			);
 			path = PexelsDemo;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 				609E621027BBC3190057E66B /* ImageRequest.swift */,
 				609E621227BBC7A80057E66B /* APIRequest.swift */,
 				609E621427BBCBE20057E66B /* Photo.swift */,
+				60670CAE27BCD26200702B48 /* PhotosResource.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -297,6 +306,7 @@
 				609E61E127BBAA290057E66B /* LaunchScreen.storyboard in Resources */,
 				609E61DE27BBAA290057E66B /* Assets.xcassets in Resources */,
 				609E61DC27BBAA270057E66B /* Main.storyboard in Resources */,
+				60670CB327BCF8FD00702B48 /* PhotoViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				609E61D927BBAA270057E66B /* ViewController.swift in Sources */,
+				60670CAF27BCD26200702B48 /* PhotosResource.swift in Sources */,
 				609E620F27BBBE310057E66B /* NetworkRequest.swift in Sources */,
 				609E61D527BBAA270057E66B /* AppDelegate.swift in Sources */,
 				609E620527BBABE90057E66B /* ViewModel.swift in Sources */,
@@ -378,6 +389,7 @@
 				609E621127BBC3190057E66B /* ImageRequest.swift in Sources */,
 				609E621327BBC7A80057E66B /* APIRequest.swift in Sources */,
 				609E620B27BBAFAB0057E66B /* APIClient.swift in Sources */,
+				60670CB227BCF8FD00702B48 /* PhotoViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
