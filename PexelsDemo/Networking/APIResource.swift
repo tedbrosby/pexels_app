@@ -8,7 +8,7 @@
 import Foundation
 
 protocol APIResource {
-    associatedtype ModelType: Decodable
+    associatedtype ModelType: Codable
     var methodPath: String { get }
     var queryItems: [URLQueryItem]? { get }
 }
@@ -29,7 +29,8 @@ extension APIResource {
             fatalError("There was an error generating the URL")
         }
         var urlRequest = URLRequest(url: url)
-        urlRequest.setValue("Basic " + apiKey, forHTTPHeaderField: "Authorization")
+        urlRequest.httpMethod = "GET"
+        urlRequest.setValue(apiKey, forHTTPHeaderField: "Authorization")
         return urlRequest
     }
 }

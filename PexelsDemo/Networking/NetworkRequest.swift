@@ -18,8 +18,9 @@ extension NetworkRequest {
     func load(_ request: URLRequest) -> Observable<Result<ModelType, Error>> {
         return Observable.create { observer in
             let task = URLSession.shared.dataTask(with: request) { [weak self] data, _, error in
+                guard let self = self else { return }
                 if let data = data,
-                   let value = self?.decode(data) {
+                   let value = self.decode(data) {
                     observer.onNext(.success(value))
                 }
                 if let error = error {
@@ -32,5 +33,14 @@ extension NetworkRequest {
                 task.cancel()
             }
         }
+    }
+}
+
+extension Data {
+    var prettyPrintedJSONString: NSString? {
+        guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
+              let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
+              let prettyPrintedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else { return nil }
+        return prettyPrintedString
     }
 }

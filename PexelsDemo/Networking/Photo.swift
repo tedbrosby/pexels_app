@@ -7,59 +7,61 @@
 
 import Foundation
 
-struct PhotosResult: Decodable {
-    let totalResults: Int
-    let page: Int
-    let perPage: Int
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
+//
+//   let photosResult = try? newJSONDecoder().decode(PhotosResult.self, from: jsonData)
+
+import Foundation
+
+// MARK: - PhotosResult
+struct PhotosResult: Codable {
     let photos: [Photo]
     let nextPage: String
+    let perPage, totalResults, page: Int
 
     enum CodingKeys: String, CodingKey {
-        case totalResults = "total_results"
-        case page
-        case perPage = "per_page"
         case photos
         case nextPage = "next_page"
+        case perPage = "per_page"
+        case totalResults = "total_results"
+        case page
     }
 }
 
 // MARK: - Photo
-struct Photo: Decodable {
-    let id: Int
-    let width: Int
+struct Photo: Codable {
     let height: Int
-    let url: String
-    let photographer: String
+    let photographer, avgColor: String
+    let id: Int
     let photographerURL: String
-    let photographerID: Int
-    let avgColor: String
+    let width: Int
     let src: Src
-    let liked: Bool
     let alt: String
+    let liked: Bool
+    let photographerID: Int
+    let url: String
 
     enum CodingKeys: String, CodingKey {
-        case id, width, height, url, photographer
-        case photographerURL = "photographer_url"
-        case photographerID = "photographer_id"
+        case height, photographer
         case avgColor = "avg_color"
-        case src, liked, alt
+        case id
+        case photographerURL = "photographer_url"
+        case width, src, alt, liked
+        case photographerID = "photographer_id"
+        case url
     }
 }
 
 // MARK: - Src
-struct Src: Decodable {
-    let original: String
-    let large2X: String
-    let large: String
-    let medium: String
-    let small: String
-    let portrait: String
-    let landscape: String
-    let tiny: String
+struct Src: Codable {
+    let medium, portrait, large, small: String
+    let tiny, original, large2X, landscape: String
 
     enum CodingKeys: String, CodingKey {
-        case original
+        case medium, portrait, large, small, tiny, original
         case large2X = "large2x"
-        case large, medium, small, portrait, landscape, tiny
+        case landscape
     }
 }
+
